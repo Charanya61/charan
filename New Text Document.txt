@@ -1,0 +1,268 @@
+Digital Passband Transmission                                Communication Systems 
+ 
+      ECE DEPT. 
+Page1 
+UNIT- 4 
+DIGITAL PASSBAND TRANSMISSION 
+PASS BAND TRANSMISSION MODEL: 
+     
+Fig: Functional model of pass band transmission model 
+ First, the message source emits M symbols on symbol for every 
+seconds, denoted by m1, m2,…..mN. These symbols are transmitted with 
+equal probability i.e., 
+       i i
+m p p   
+             i all for M
+1  
+These symbols are given to signal transmission decoder, it produces a 
+vector i
+S made up of N real elements M N . With Vector i
+S as the input, 
+modulator then constructs a distinct signal  t Si
+ of duration seconds. 
+The signal t Si
+ is necessarily an energy signal given as 
+ M i dt t S E t
+i i
+,..... 2,1 ,
+0
+2   
+i
+S modulates with sinusoidal carrier. The energy signal t Si
+ transmits 
+over the channel. The channel has following characteristics. 
+ Channel is linear, with a sufficient bandwidth to transmit t Si
+ 
+without distortion. 
+ The noise added to the channel is AWGN with a process of zero 
+mean and power spectral density 20
+N 
+ 
+Digital Passband Transmission                                Communication Systems 
+ 
+      ECE DEPT. 
+Page2 
+The receiver which consist of a detector followed by a signal 
+transmission decoder, performs two functions. 
+ It reverses the operations performed in the transmitter 
+It minimizes the effect of channel noise on the estimate of m^ from 
+the transmitted symbol i
+m . 
+GEOMETRIC REPRESENTATION OF SIGNALS:  
+The main idea of geometric representation of signals is to represent any 
+set of M signals {si(t)} as a linear combination of N Orthonormal basis 
+functions  where N≤M, then the real valued energy signals  s1(t), 
+s2(t),…..sM(t) each of duration T seconds , written as ------1 
+Where the coefficients of the expression are expressed as -----2 
+The real valued basis functions are Orthonormal it means, 
+ 
+In the above eqn first condition state that the basis functions have unit 
+energy. The second condition states that the basis functions are ortho normal 
+to each other. 
+The set of coefficients  { } is naturally viewed as N dimensional 
+vector, denoted by si. It has one to one relationship with the transmitted signal 
+si(t). 
+Where  , 
+ 
+Digital Passband Transmission                                Communication Systems 
+ 
+      ECE DEPT. 
+Page3 
+ 
+Given the N elements of the vector Si  operating as input, we use fig(a) 
+generating the signal Si(t). It is derived from eqn(1). It consists of N bank 
+multipliers, with each multiplier have one basis function followed by 
+summer, this scheme is called as synthesizer. 
+Given the signal Si(t), i=1, 2, …..M operating as input, we use fig(b) 
+generating signal vector. it is derived from eqn(2) It consists of N product 
+integrators (or) correlators, with each multiplier have own basis function. 
+This scheme is called analyzer.  
+ 
+ 
+Consider an N dimensional Euclidian space, having M points 
+corresponds to signal vector, N mutually perpendicular axes labeled 
+. This N dimensional Euclidian space is called  Signal Space. 
+ 
+Digital Passband Transmission                                Communication Systems 
+ 
+      ECE DEPT. 
+Page4 
+ 
+Fig : Geo metric representation of signals for N= 2  & M=3 
+In N dimensional Euclidian space, we may define length of the vectors, 
+Distance between vectors and angles between vector. 
+The squared length of any signal vector is defined as the inner product 
+or dot product of Si itself 
+ 
+The relation between energy of the signal & representation of vector is 
+derived as 
+ 
+                          
+For j=k,  
+ 
+Digital Passband Transmission                                Communication Systems 
+ 
+      ECE DEPT. 
+Page5 
+ 
+In case of pair of signal si(t) and sk(t), we have 
+ 
+The squared distance between the points represented by the signals si(t) & 
+sk(t) is denoted as 
+ 
+The angle between two signal vectors si & sk  is expressed as 
+ 
+The cosine of the angle θik is equal to inner product of these two vectors 
+divided by the product of their individual norms. 
+GRAM SCHMIDT ORTHOGONALIZATION PROCEDURE: 
+ In case of geometric representation of signals, the M energy signals are 
+linear combination of N orthonormal basis functions, this one can be verified 
+mathematically by using Gram-Schmidt orthogonalization. 
+ Let us consider M energy signals S1(t),S2(t)……SM(t). By using S1(t) , 
+the first basis function is defined as, 
+                                    -------1 
+ 
+Digital Passband Transmission                                Communication Systems 
+ 
+      ECE DEPT. 
+Page6 
+                                        
+By using S2(t) , the coefficient S21 is defined as, 
+                             -----3 
+We may thus introduce new a new intermediate function,  ------4 
+Which is orthogonal to ᶲ1(t),over the interval 0 ≤ t  ≤ T, ᶲ2(t) is defined as --------5 
+Substituting eqn (4) in eqn (5), We get -------6 
+It is clear that from eqn 5, ------7 
+From eqn 6, ------8 
+The set of basis functions defined as, 
+ 
+Digital Passband Transmission                                Communication Systems 
+ 
+      ECE DEPT. 
+Page7 
+ 
+RESPONSE OF BANK OF CORRELATORS IN NOISE: 
+Suppose that the input to the bank of N product integrators or 
+correlators is not the transmitted signal Si(t) but actually it is a received signal 
+x(t).From the equivalent model of channel it is, 
+ 
+The output of the correlator j, is the sample function of RV xj is, 
+ 
+Consider a new random variable X’(t) whose sample function x’(t) is related 
+to the received signal x(t) as follows, 
+ 
+Substitute 1 and 2 eqns in 3, then we get 
+ 
+The sample function x’(t) therefore depends only on the channel noise w(t). 
+From 3&4 eqns, 
+ 
+Digital Passband Transmission                                Communication Systems 
+ 
+      ECE DEPT. 
+Page8 
+ 
+From the above eqn, w’(t) must be included in the right to preserve the 
+equality in eqn 5. 
+Note:  
+ The signal si(t), i=1, 2, …M is applied to a bank of correlators, with a 
+common input and supplied with a suitable set of N orthogonal basis functions, N.  
+The resulting output defines the signal vector si.  
+ We represent each signal si(t) as a point in the Euclidian space, N ≤ M 
+(referred to as transmitted signal point or message point).The set of message points 
+corresponding to the set of transmitted signals si(t) {i = 1 to M} is called signal 
+constellation. 
+ The received signal x(t) is applied to a bank of N correlators and the 
+correlator outputs define the observation vector x.   
+ On the receiving side the representation of the received signal x(t) is 
+complicated by the additive noise w(t).  
+ The vector x differs from the vector si by the noise vector w. 
+ However only the portion of it which interferes with the detection process is 
+of importance to us, and this is fully described by w(t).   
+ Based on the observation vector ‘x’ we may represent the received signal 
+x(t) by a point in the same Euclidian space used to represent the transmitted signal. 
+ 
+CORRELATION RECEIVER:  
+The optimum receiver consists of two sub systems 
+i) detector or demodulator 
+ii) signal transmission decoder 
+ 
+Digital Passband Transmission                                Communication Systems 
+ 
+      ECE DEPT. 
+Page9 
+Detector or demodulator is shown in fig a, in consists of N-bank of 
+correlators, each one having one orthogonal basis function that are locally 
+generated. This bank of correlators operates on received signal x(t) and 
+produce the observation vector x.                                        
+ 
+The second part of the receiver is signal transmission decoder, it is 
+shown in fig b. It is implemented in the form of maximum likelihood decoder 
+that operates on the observation vector x to produce an estimate  of the 
+transmitted symbol mi in the way to minimize the avg probability error. 
+ 
+ 
+Digital Passband Transmission                                Communication Systems 
+ 
+      ECE DEPT. 
+Page10 
+First the observation vector x are first multiplied by the individual 
+signal vectors S1,S2-----SM and the resulting products are successively 
+summed by accumulators to produce corresponding set of inner products. 
+Next these inner products are subtracted by transmitted signal energies. 
+Finally the largest in the resulting set of numbers is selected and takes the 
+appropriate decision on the transmitted message. 
+The optimum receiver in eqn 1 & 2 is commonly referred to as 
+correlation receiver. 
+PROBABILITY OF ERROR: 
+The average probability of symbol error, Pe is  
+ 
+The above eqn is rewritten interms of likelihood function as follows 
+ 
+ The above equation represents avg probability of error interms of likelihood 
+functions for an N dimensional vector. 
+DETECTION OF SIGNALS WITH UNKNOWN PHASE:  
+ Consider a digital communication system in which the transmitted 
+signal equals   
+  ()= cos(2 )       0≤ ≤                            −−−−1 
+ Where E is the signal energy, T is the duration of the 
+signaling interval, and the fi is an integral multiple of 1/2T. When no 
+ 
+Digital Passband Transmission                                Communication Systems 
+ 
+      ECE DEPT. 
+Page11 
+provision is made to phase synchronize the receiver with transmitter, the 
+received signal will, for AWGN channel, be of the form 
+()= cos(2 + )  + ()     0≤ ≤                            −−−−2  
+Where w(t) is the sample function of a white Gaussian noise process of zero 
+mean and power spectral density N0/2. The phase  is unknown, and it is 
+usually considered to be the sample value of a random variable uniformly 
+distributed between 0 and 2 radians. This implies a complete lack of 
+knowledge of the phase. A digital communication system characterized in 
+this way is said to be non-coherent.  
+From eq. 2, the received signal, the output of the associated correlators in the 
+receiver will be a function of unknown phase . From trigonometric identity, 
+we may rewrite equation 2 in the expanded form 
+()= 2 cos cos(2 )− 2 sin sin(2 )  + ( )     
+    0≤ ≤                            −−−−3 
+Suppose that the received signal x(t) is applied to a pair of correlators, we 
+assume that one correlators is supplied with the reference signal 
+√ cos(2 ) and other is supplied with the reference signal √ sin(2 ) 
+For the both correlators, the observation interval is  0≤ ≤ . Then in the 
+absence of noise we find that the first correlator output equals √ cos and 
+second correlator output equals −√  sin . The dependence on the unknown 
+phase  may be removed by summing the squares of the two correlator 
+outputs, and then taking the square root of the sum. Thus when the noise w(t) 
+is zero, the result of these operations is simply √ , which is independent of 
+phase . So, for the detection of a sinusoidal signal of arbitrary phase, and 
+which is corrupted by an additive white Gaussian noise (which is in eq.2), we 
+can use “Quadrature receiver “, this receiver is optimum in the sense that it 
+realizes detection of signals with the minimum probability of error.  
+ 
+Digital Passband Transmission                                Communication Systems 
+ 
+      ECE DEPT. 
+Page12 
+ 
+Fig: Quadrature receiver 
+ 
